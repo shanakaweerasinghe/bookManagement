@@ -7,9 +7,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import com.esad.lms.bookmanagement.model.Books;
 
-
-
-public class BooksRowMapper implements RowMapper<Books>{
+public class BooksRowMapper implements RowMapper<Books> {
 	@Override
 	public Books mapRow(ResultSet rs, int arg1) throws SQLException {
 		Books books = new Books();
@@ -26,8 +24,8 @@ public class BooksRowMapper implements RowMapper<Books>{
 		books.setDateOfPurchase(rs.getString("dateOfPurchase"));
 		books.setPrice(rs.getString("price"));
 		books.setDescription(rs.getString("description"));
- 
-        return books;
+
+		return books;
 	}
 
 }
